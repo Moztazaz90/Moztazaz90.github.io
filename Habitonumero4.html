@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hábito 4 - Piensa Ganar-Ganar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .apple-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass-dark {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .golden-button {
+      background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .golden-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="apple-bg min-h-screen flex items-center justify-center p-8">
+
+  <section class="max-w-4xl w-full glass-dark rounded-3xl p-10 text-white">
+    <h1 class="text-5xl font-bold mb-8 text-center">Hábito 4: Piensa Ganar-Ganar</h1>
+
+    <!-- Imagen -->
+    <div class="mb-8 text-center">
+      <img src="habito4.jpeg" alt="Imagen del Hábito 1" class="rounded-xl mx-auto" style="max-width: 500px; height: auto;" />
+    </div>
+
+    <!-- Explicación -->
+    <p class="text-lg leading-relaxed mb-6">
+        Ganar-Ganar es un estado mental y del corazón que busca constantemente el beneficio mutuo en todas 
+        las interacciones humanas. Significa que los acuerdos o soluciones son mutuamente benéficos y satisfactorios. 
+        Ambas partes se sienten bien con la decisión y se comprometen con el plan de acción.
+    </p>
+
+    <!-- Ejemplo -->
+    <div class="glass-dark p-6 rounded-2xl mb-8">
+      <h2 class="text-xl font-semibold mb-3">Ejemplo práctico:</h2>
+      <p class="text-white/90">
+        En lugar de competir destructivamente con tus amigos, busca maneras en que todos puedan 
+        tener éxito. En conflictos familiares, busca soluciones donde todos ganen algo valioso.
+      </p>
+    </div>
+
+    <!-- Botón de regreso -->
+<div class="text-center mt-12">
+    <a href="menu.html"
+       class="golden-button px-8 py-4 rounded-2xl text-black font-bold text-lg hover-scale inline-block">
+       ← Volver al Menú
+    </a>
+  </div>
+
+  <!-- Botón siguiente hábito -->
+  <div class="text-center mt-6">
+    <a href="Habitonumero5.html" class="golden-button px-8 py-4 rounded-2xl text-black font-bold text-lg hover-scale">
+      Siguiente Hábito →
+    </a>
+  </div>

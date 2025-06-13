@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los 7 Hábitos de los Adolescentes Altamente Efectivos - Sean Covey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-purple: #AF52DE;
+            --apple-pink: #FF2D92;
+            --apple-orange: #FF9500;
+            --apple-green: #34C759;
+            --apple-red: #FF3B30;
+            --apple-yellow: #FFCC00;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --gradient-6: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --gradient-7: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', system-ui, sans-serif;
+        }
+
+        .apple-bg {
+            background: linear-gradient(135deg, 
+                #667eea 0%, 
+                #764ba2 25%, 
+                #f093fb 50%, 
+                #f5576c 75%, 
+                #4facfe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .golden-button {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .golden-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .habit-card {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        .habit-card.animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text {
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .habit-gradient-1 { background: var(--gradient-1); }
+        .habit-gradient-2 { background: var(--gradient-2); }
+        .habit-gradient-3 { background: var(--gradient-3); }
+        .habit-gradient-4 { background: var(--gradient-4); }
+        .habit-gradient-5 { background: var(--gradient-5); }
+        .habit-gradient-6 { background: var(--gradient-6); }
+        .habit-gradient-7 { background: var(--gradient-7); }
+    </style>
+</head>
+<body class="apple-bg min-h-screen">
+    <!-- Video Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-glass">
+                Contenido Multimedia
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Video -->
+                <div class="glass-dark rounded-3xl p-8 hover-scale">
+                    <h3 class="text-2xl font-bold text-white mb-6">Video Resumen</h3>
+                    <div class="aspect-video rounded-2xl overflow-hidden">
+                        <iframe 
+                            src="https://www.youtube.com/embed/lzMKsZGvXsI" 
+                            title="Los 7 Hábitos - Video Resumen"
+                            class="w-full h-full"
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- Audio Libro -->
+                <div class="glass-dark rounded-3xl p-8 hover-scale">
+                    <h3 class="text-2xl font-bold text-white mb-6">Audiolibro Completo</h3>
+                    <div class="aspect-video rounded-2xl overflow-hidden">
+                        <iframe 
+                            src="https://www.youtube.com/embed/MdsqE7QxDnM" 
+                            title="Los 7 Hábitos - Audiolibro"
+                            class="w-full h-full"
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotify Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-dark rounded-3xl p-12 max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+                    Escucha el Podcast en Spotify
+                </h2>
+                
+                <div class="bg-green-500 rounded-2xl p-8 mb-8">
+                    <iframe 
+                        src="https://open.spotify.com/embed/album/5zkjQaa3Fi0IKXDAA2liME?utm_source=generator" 
+                        width="100%" 
+                        height="352" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        class="rounded-xl">
+                    </iframe>
+                </div>
+                
+                <p class="text-lg text-white/90">
+                    Disfruta del contenido completo del libro en formato de podcast, 
+                    perfecto para escuchar mientras haces ejercicio, viajas o estudias.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citas Inspiradoras -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-glass">
+                Citas Inspiradoras
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-dark rounded-2xl p-8 hover-scale">
+                    <blockquote class="text-lg text-white/90 italic">
+                        "No puedes cambiar los frutos que ya están colgando del árbol, pero puedes cambiar las semillas que plantas."
+                    </blockquote>
+                </div>
+                
+                <div class="glass-dark rounded-2xl p-8 hover-scale">
+                    <blockquote class="text-lg text-white/90 italic">
+                        "El precio de la grandeza es la responsabilidad."
+                    </blockquote>
+                </div>
+                
+                <div class="glass-dark rounded-2xl p-8 hover-scale">
+                    <blockquote class="text-lg text-white/90 italic">
+                        "La forma en que vemos el problema es el problema."
+                    </blockquote>
+                </div>
+                
+                <div class="glass-dark rounded-2xl p-8 hover-scale">
+                    <blockquote class="text-lg text-white/90 italic">
+                        "Comenzar con un fin en mente significa comenzar con una comprensión clara de tu destino."
+                    </blockquote>
+                </div>
+                
+                <div class="glass-dark rounded-2xl p-8 hover-scale">
+                    <blockquote class="text-lg text-white/90 italic">
+                        "La confianza es el pegamento de la vida. Es el ingrediente más esencial en la comunicación efectiva."
+                    </blockquote>
+                </div>
+                
+                <div class="glass-dark rounded-2xl p-8 hover-scale">
+                    <blockquote class="text-lg text-white/90 italic">
+                        "La fuerza está en las diferencias, no en las similitudes."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrantes del Proyecto -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-glass">
+                Equipo del Proyecto
+            </h2>
+            
+            <div class="glass-dark rounded-3xl p-12 max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-white mb-4">Grupo 305</h3>
+                    <p class="text-xl text-white/80">Proyecto Académico Colaborativo</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass rounded-2xl p-6 text-center hover-scale">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">XL</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Ximena Adeliz Lozano Sanchez</h4>
+                    </div>
+                    
+                    <div class="glass rounded-2xl p-6 text-center hover-scale">
+                        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">RL</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Romina Luevano Jiménez</h4>
+                    </div>
+                    
+                    <div class="glass rounded-2xl p-6 text-center hover-scale">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">FL</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Fernanda Daniela Lorenzo Alba</h4>
+                    </div>
+                    
+                    <div class="glass rounded-2xl p-6 text-center hover-scale">
+                        <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">CE</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">César Espinosa Gonzales</h4>
+                    </div>
+                    
+                    <div class="glass rounded-2xl p-6 text-center hover-scale md:col-span-2 lg:col-span-1">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">IH</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Irvin Gael Hernandez Serrano</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="glass-dark rounded-3xl p-12 text-center">
+                <div class="flex justify-center mb-8">
+                    <a href="https://www.amazon.com.mx/dp/0345804155" target="_blank" 
+                       class="golden-button rounded-2xl px-12 py-4 text-black font-bold text-xl hover-scale">
+                        Comprar Libro en Amazon
+                    </a>
+                </div>
+                
+                <p class="text-white/60 text-lg">
+                    "Los 7 Hábitos de los Adolescentes Altamente Efectivos"
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animate habit cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.habit-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add parallax effect to floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.float-animation');
+            const speed = 0.5;
+
+            parallax.forEach(element => {
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
+  <!-- 🔙 Botón para regresar al inicio -->
+  <div class="text-center mt-12">
+  <a href="PRACTICA DE EJEMPLO.html"
+  class="golden-button px-8 py-4 rounded-2xl text-black font-bold text-lg hover-scale inline-block">
+  ← Volver a la Página Principal
+</a>
+</div>
+</section>
+    <!-- Botón de regreso -->
+<div class="text-center mt-12">
+    <a href="menu.html"
+       class="golden-button px-8 py-4 rounded-2xl text-black font-bold text-lg hover-scale inline-block">
+       ← Volver al Menú
+    </a>
+  </div>

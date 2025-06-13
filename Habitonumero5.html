@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hábito 5 - Busca Primero Entender, Luego Ser Entendido</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .apple-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass-dark {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .golden-button {
+      background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .golden-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="apple-bg min-h-screen flex items-center justify-center p-8">
+
+  <section class="max-w-4xl w-full glass-dark rounded-3xl p-10 text-white">
+    <h1 class="text-5xl font-bold mb-8 text-center">Hábito 5: Busca Primero Entender, Luego Ser Entendido</h1>
+
+    <!-- Imagen -->
+    <div class="mb-8 text-center">
+      <img src="habito5.jpeg" alt="Imagen del Hábito 1" class="rounded-xl mx-auto" style="max-width: 500px; height: auto;" />
+    </div>
+
+    <!-- Explicación -->
+    <p class="text-lg leading-relaxed mb-6">
+        La mayoría de las personas no escuchan con la intención de entender; escuchan con la intención de responder. 
+        Este hábito implica escuchar empáticamente, tratando realmente de entender el punto de vista de la otra persona 
+        antes de intentar comunicar el tuyo.
+    </p>
+
+    <!-- Ejemplo -->
+    <div class="glass-dark p-6 rounded-2xl mb-8">
+      <h2 class="text-xl font-semibold mb-3">Ejemplo práctico:</h2>
+      <p class="text-white/90">
+        Antes de responder a alguien, repite lo que entendiste que dijeron. Pregunta: "¿Es correcto?" 
+        Solo después de que confirmen que los entendiste, comparte tu perspectiva.
+      </p>
+    </div>
+
+    <!-- Botón de regreso -->
+<div class="text-center mt-12">
+    <a href="menu.html"
+       class="golden-button px-8 py-4 rounded-2xl text-black font-bold text-lg hover-scale inline-block">
+       ← Volver al Menú
+    </a>
+  </div>
+
+  <!-- Botón siguiente hábito -->
+  <div class="text-center mt-6">
+    <a href="Habitonumero6.html" class="golden-button px-8 py-4 rounded-2xl text-black font-bold text-lg hover-scale">
+      Siguiente Hábito →
+    </a>
+  </div>
